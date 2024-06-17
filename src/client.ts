@@ -92,7 +92,8 @@ function getLspCommand(uri: Uri) {
 
   const command = config.get<string | undefined>('nargoPath') || findNargo();
 
-  const flags = config.get<string | undefined>('nargoFlags') || '';
+  const flags = '';
+  //config.get<string | undefined>('nargoFlags') || '';
 
   // Remove empty strings from the flags list
   const args = ['lsp', ...flags.split(' ')].filter((arg) => arg !== '');
